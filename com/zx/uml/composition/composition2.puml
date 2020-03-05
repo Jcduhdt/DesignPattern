@@ -1,0 +1,12 @@
+@startuml
+
+class Person{
+idCard:IDCard
+Head:Head = new Head()
+}
+class Head
+class IDCard
+
+Person *-- Head
+Person o-- IDCard
+@enduml

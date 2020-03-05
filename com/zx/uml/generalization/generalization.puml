@@ -1,0 +1,12 @@
+@startuml
+
+class DaoSupport{
+save():void
+deledt():void
+}
+
+class PersonServideBean
+
+DaoSupport <|-- PersonServideBean
+
+@enduml
