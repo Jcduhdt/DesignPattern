@@ -1,4 +1,4 @@
-package com.zx.singleton;
+package com.zx.jdksrc;
 
 /**
  * @author ZhangXiong
@@ -13,7 +13,7 @@ package com.zx.singleton;
  * 3.单例模式使用的场景：需要频繁的进行创建和销毁的对象、创建对象时耗时过多或耗费资源过多(即： 重量级
  *   对象)，但又经常用到的对象、 工具类对象、频繁访问数据库或文件的对象(比如数据源、 session 工厂等)
  */
-public class Test {
+public class Singleton {
     public static void main(String[] args) {
         //点进去看源码，发现是饿汉式
         Runtime runtime = Runtime.getRuntime();
