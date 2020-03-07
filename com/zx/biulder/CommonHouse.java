@@ -1,0 +1,28 @@
+package com.zx.biulder;
+
+/**
+ * @author ZhangXiong
+ * @version v12.0.1
+ * @date 2020-03-07
+ * 设计模式
+ * 建造者模式
+ */
+public class CommonHouse extends AbstractHouse {{
+
+}
+
+    @Override
+    public void buildBasic() {
+        System.out.println("给普通房子打地基");
+    }
+
+    @Override
+    public void buildWalls() {
+        System.out.println("给普通房子砌墙");
+    }
+
+    @Override
+    public void roofed() {
+        System.out.println("给普通房子封顶");
+    }
+}
