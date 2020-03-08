@@ -1,0 +1,24 @@
+@startuml
+
+class Voltage220V{
+output220V():void
+}
+
+interface Voltage5V{
+output5V():void
+}
+
+class VoltageAdapter
+
+Voltage220V <|-- VoltageAdapter
+Voltage5V <|.. VoltageAdapter
+
+class Phone{
+charging():void
+}
+class Client
+
+Voltage5V <.. Phone
+Phone <.. Client
+VoltageAdapter <.. Client
+@enduml

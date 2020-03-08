@@ -1,0 +1,14 @@
+@startuml
+interface Interface4{
+operation1():void
+operation2():void
+operation3():void
+operation4():void
+}
+class AbsAdapter
+class A
+
+Interface4 <|-- AbsAdapter
+AbsAdapter <.. A
+
+@enduml
