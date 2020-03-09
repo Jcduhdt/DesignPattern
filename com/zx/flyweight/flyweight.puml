@@ -1,0 +1,24 @@
+@startuml
+class WebSite{
+use():void
+}
+
+class ConcreteWebSite{
+use():void
+}
+
+class WebSiteFactory{
+getWebSiteCategory():void
+}
+
+WebSite <|-- ConcreteWebSite
+WebSite --o WebSiteFactory
+
+class Client
+Client ..> ConcreteWebSite
+Client ..> WebSiteFactory
+
+class User
+Client ..> User
+ConcreteWebSite ..> User
+@enduml
