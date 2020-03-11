@@ -1,0 +1,35 @@
+@startuml
+interface Iterator{
+hasNext():boolean
+next():E
+remove():void
+}
+interface Aggregate{
+createIterator():void
+}
+
+class ConcreteIterator
+class ConcreteIterator2
+
+class ConcreteAggregate{
+eles:ArrayList
+createIterator():Iterator
+}
+class ConcreteAggregate2{
+eles:数组
+createIterator():Iterator
+}
+
+Aggregate <|.. ConcreteAggregate
+Aggregate <|.. ConcreteAggregate2
+
+Iterator <|.. ConcreteIterator
+Iterator <|.. ConcreteIterator2
+
+ConcreteIterator <.. ConcreteAggregate
+ConcreteIterator2 <.. ConcreteAggregate2
+
+class Client
+Client ..> Aggregate
+Client ..> Iterator
+@enduml
