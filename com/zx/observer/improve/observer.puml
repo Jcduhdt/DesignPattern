@@ -1,0 +1,24 @@
+@startuml
+class Client
+interface Subject{
+registerObserver(o:Observer):void
+remove(o:Observer):void
+notifyObservers():void
+}
+interface Observer{
+update():void
+}
+Client ..> Subject
+Client ..> Observer
+Subject ..> Observer
+class WeatherDate{
+observers:ArrayList
+}
+Subject <|.. WeatherDate
+Observer --o WeatherDate
+
+Observer <|-- CurrentCondition
+Observer <|-- Baidu
+Observer <|-- Sina
+
+@enduml
