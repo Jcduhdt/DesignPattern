@@ -1,0 +1,26 @@
+@startuml
+Client ..> Mediator
+class Colleague{
+sendMessage():void
+getMediator():Mediator
+}
+Client ..> Colleague
+Mediator -- Colleague
+
+class ConcreteMediator{
+colleagueMap:HashMap
+getMessage():void
+}
+Mediator <|-- ConcreteMediator
+ConcreteMediator o-- Colleague
+Colleague <|-- Alarm
+Colleague <|-- CoffeeMachine
+Colleague <|-- Curtains
+Colleague <|-- TV
+
+Mediator <.. Alarm
+Mediator <.. CoffeeMachine
+Mediator <.. Curtains
+Mediator <.. TV
+
+@enduml
