@@ -1,0 +1,21 @@
+@startuml
+class State{
+deduceMoney():void
+raffle():boolean
+dispensePrize():void
+}
+
+State <|-- NoRaffleState
+State <|-- CanRaffleState
+State <|-- DispenseState
+State <|-- DispenseOutState
+
+
+Activity -- NoRaffleState
+Activity -- CanRaffleState
+Activity -- DispenseState
+Activity -- DispenseOutState
+
+Client ..> Activity
+Client ..> State
+@enduml
