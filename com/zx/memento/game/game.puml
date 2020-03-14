@@ -1,0 +1,17 @@
+@startuml
+class GameRole{
+createMemento():Memento
+}
+class Memento{
+vit:int
+def:int
+}
+class Caretaker{
+createMemento:Memento
+}
+
+Client ..> GameRole
+Client ..> Memento
+GameRole ..> Memento
+Memento --o Caretaker
+@enduml
