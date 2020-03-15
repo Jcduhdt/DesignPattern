@@ -1,0 +1,28 @@
+@startuml
+class Duck{
+flyBehavior:FlyBehavior
+quackBehavior:QuackBehavior
+}
+
+Duck <|-- PekingDuck
+Duck <|-- WildDuck
+Duck <|-- ToyDuck
+
+class FlyBehavior{
+fly():void
+}
+Duck o-- FlyBehavior
+
+FlyBehavior <|.. NoFlyBehavior
+FlyBehavior <|.. BadBehavior
+FlyBehavior <|.. GoodFlyBehavior
+
+class QuackBehavior{
+quack():void
+}
+Duck o-- QuackBehavior
+
+QuackBehavior <|.. GeGeQuackBehavior
+QuackBehavior <|.. GaGaQuackBehavior
+QuackBehavior <|.. NoQuackBehavior
+@enduml
